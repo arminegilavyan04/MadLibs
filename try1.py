@@ -53,8 +53,11 @@ def third_template():
     magical_creatures=input("Enter a plural example of magical creatures:")
     adjective3=input("Enter an adjective:")
     room=input("Enter a room name in a house:")
+    color=input("Enter a color:")
+    animal = input("Enter an animal:")
     noun=input("Enter a noun here:")
     noun2=input("enter a noun:")
+    place=input("Enter a place here:")
     noun3=input("Enter a plural example of a noun:")
     adjective4=input("Enter an adjective:")
     noun4=input("Enter a plural form of a noun:")
@@ -64,7 +67,7 @@ def third_template():
     adjective5=input("Enter an adjective:")
     noun5=input("Enter a noun:")
     return f'''Dear {persons_name}, I am writing to you from a {adjective} castle in an enchanted forest. 
-           I found myself here one day after going for a ride on a {Color} {Animal} in {Place}. 
+           I found myself here one day after going for a ride on a {color} {animal} in {place}. 
            here are {adjective2} {magical_creatures} and {adjective3} {magical_creatures} here! 
            fn the {room} there is a pool full of {noun}. I fall asleep each night on a {noun2} of {noun3} and dream of {adjective4} {noun4}.
            It feels as though I have lived here for {number} {time_measure}." \
@@ -81,7 +84,7 @@ def choices(choice_template):
         print(third_template())
     elif choice_template == "r":
         random_state = random.choice(number)
-        choices(random_state)
+        return choices(random_state)
     else:
         print("Sorry, we don't have a template like that")
 
