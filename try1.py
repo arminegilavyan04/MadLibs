@@ -1,5 +1,5 @@
 import random
-choice= input("Please choose your desired number(1,2 or 3). If you don't have a choice-select 'r':")
+choice_template= input("Please choose your desired number(1,2 or 3). If you don't have a choice-select 'r':")
 def first_template():
     number=input("Enter a number:")
     measure_of_time=input("Enter the measure of time:")
@@ -15,17 +15,18 @@ def first_template():
     noun3=input("Enter the noun3 here:")
     body_part2=input("Enter the 2nd body part:")
     noun4=input("Enter the 4th noun:")
-    adjective3=input("Enter an adjecive:")
+    adjective3=input("Enter an adjective:")
     silly_word=input("Enter a silly word here:")
-    return f''' t was about {number} {measure_of_time} ago when I arrived at the hospital in a {mode_of_transportation}. The hospital is a/an {adjective} place, there are a lot of {adjective2} {noun} here. 
-           There are nurses here who have {color} {body_part}. If someone wants to come into my room I told them that they have to {verb} first. I’ve decorated my room with {number2} {noun2}.
-           Today I talked to a doctor and they were wearing a {noun3} on their {body_part2}. 
-           I heard that all doctors {verb} {noun4} every day for breakfast. The most {adjective3} thing about being in the hospital is the {silly_word} {noun} !'''
+    return f''' It was about {number} {measure_of_time} ago when I arrived at the hospital in a {mode_of_transportation}. The hospital is a/an {adjective} place, there are a lot of {adjective2} {noun} here. 
+                There are nurses here who have {color} {body_part}.If someone wants to come into my room I told them that they have to {verb} first. 
+                I’ve decorated my room with {number2} {noun2}.
+                Today I talked to a doctor and they were wearing a {noun3} on their {body_part2}. 
+                I heard that all doctors {verb} {noun4} every day for breakfast. The most {adjective3} thing about being in the hospital is the {silly_word} {noun} !'''
 
 
 def second_template():
     persons_name=input("Enter a person name:")
-    noun=input("Enter a noun")
+    noun=input("Enter a noun:")
     adjective_feeling=input("Enter an adjective that describes a feeling:")
     verb=input("Enter a verb:")
     adjective_feeling2 = input("Enter an adjective that describes a feeling:")
@@ -60,29 +61,29 @@ def third_template():
     number=input("Enter a number:")
     time_measure=input("Enter a time measure:")
     verb=input("Enter a verb ending with ing:")
-    adjective5=input("Enter an adjective")
-    noun5=input("Enter a noun")
+    adjective5=input("Enter an adjective:")
+    noun5=input("Enter a noun:")
     return f'''Dear {persons_name}, I am writing to you from a {adjective} castle in an enchanted forest. 
-           found myself here one day after going for a ride on a (Color) (Animal) in (Place). 
+           I found myself here one day after going for a ride on a {Color} {Animal} in {Place}. 
            here are {adjective2} {magical_creatures} and {adjective3} {magical_creatures} here! 
            fn the {room} there is a pool full of {noun}. I fall asleep each night on a {noun2} of {noun3} and dream of {adjective4} {noun4}.
            It feels as though I have lived here for {number} {time_measure}." \
            I hope one day you can visit, although the only way to get here now is {verb} on a {adjective5} {noun5}!!'''
 
 
-def choices(choice):
-    if choice == "1":
-        print(first_template())
-    elif choice == "2":
-        print(second_template())
-    elif choice == "3":
-        print(third_template())
-
-
-templates=[first_template,second_template,third_template]
-choices(choice)
-
-if choice == "r":
+def choices(choice_template):
     number=['1','2','3']
-    random_state=random.choice(number)
-    choices(random_state)
+    if choice_template == "1":
+        print(first_template())
+    elif choice_template == "2":
+        print(second_template())
+    elif choice_template == "3":
+        print(third_template())
+    elif choice_template == "r":
+        random_state = random.choice(number)
+        choices(random_state)
+    else:
+        print("Sorry, we don't have a template like that")
+
+choices(choice_template)
+
