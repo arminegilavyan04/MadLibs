@@ -70,7 +70,7 @@ def third_template():
            I found myself here one day after going for a ride on a {color} {animal} in {place}. 
            here are {adjective2} {magical_creatures} and {adjective3} {magical_creatures} here! 
            fn the {room} there is a pool full of {noun}. I fall asleep each night on a {noun2} of {noun3} and dream of {adjective4} {noun4}.
-           It feels as though I have lived here for {number} {time_measure}." \
+           It feels as though I have lived here for {number} {time_measure}." 
            I hope one day you can visit, although the only way to get here now is {verb} on a {adjective5} {noun5}!!'''
 
 
